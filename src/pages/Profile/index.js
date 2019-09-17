@@ -1,15 +1,57 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import { Container, Title } from './styles';
+
 import Background from '~/components/Background';
+import { updateProfileRequest } from '~/store/modules/user/actions';
+
+import {
+  Container,
+  Title,
+  Form,
+  FormInput,
+  Separator,
+  SubmitButton,
+} from './styles';
 
 export default function Profile() {
+  const profile = useSelector(state => state.user.profile);
+  const dispatch = useDispatch();
+
+  const emailRef = useRef();
+  const passwordRef = useRef();
+  const oldPasswordRef = useRef();
+  const confirmPasswordRef = useRef();
+
+  const [name, setName] = useState(profile.name);
+  const [email, setEmail] = useState(profile.email);
+  const [oldPassword, setOldPassword] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+
+  useEffect(() => {
+    setOldPassword('');
+    setPassword('');
+    setConfirmPassword('');
+  }, [profile]);
+
+  function handleSubmit() {
+    dispatch(
+      updateProfileRequest({
+        name,
+        email,
+        oldPassword,
+        password,
+        confirmPassword,
+      })
+    );
+  }
+
   return (
     <Background>
       <Container>
         <Title>Meu perfil</Title>
 
-        <Form>
         <Form>
           <FormInput
             icon="person-outline"
@@ -29,7 +71,7 @@ export default function Profile() {
             placeholder="Digite ser e-email"
             ref={emailRef}
             returnKeyType="next"
-            onSubmitEditing={() => passwordRef.current.focus()}
+            onSubmitEditing={() => oldPasswordRef.current.focus()}
             value={email}
             onChangeText={setEmail}
           />
@@ -41,8 +83,8 @@ export default function Profile() {
             secureTextEntry
             placeholder="Sua senha atual"
             ref={oldPasswordRef}
-            returnKeyType="send"
-            onSubmitEditing={handleSubmit}
+            returnKeyType="next"
+            onSubmitEditing={() => passwordRef.current.focus()}
             value={oldPassword}
             onChangeText={setOldPassword}
           />
@@ -52,8 +94,8 @@ export default function Profile() {
             secureTextEntry
             placeholder="Sua senha nova"
             ref={passwordRef}
-            returnKeyType="send"
-            onSubmitEditing={handleSubmit}
+            returnKeyType="next"
+            onSubmitEditing={() => confirmPasswordRef.current.focus()}
             value={password}
             onChangeText={setPassword}
           />
@@ -69,9 +111,7 @@ export default function Profile() {
             onChangeText={setConfirmPassword}
           />
 
-          <SubmitButton loading={loading} onPress={handleSubmit}>
-            Criar conta
-          </SubmitButton>
+          <SubmitButton onPress={handleSubmit}>Atualizar perfil</SubmitButton>
         </Form>
       </Container>
     </Background>
