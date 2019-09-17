@@ -33,6 +33,8 @@ target 'modulo10' do
 
   pod 'RNCAsyncStorage', :path => '../node_modules/@react-native-community/async-storage'
 
+  pod 'RNReanimated', :path => '../node_modules/react-native-reanimated'
+
   target 'modulo10Tests' do
     inherit! :search_paths
     # Pods for testing
