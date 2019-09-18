@@ -188,10 +188,6 @@ android {
 }
 
 dependencies {
-    implementation project(':react-native-reanimated')
-    implementation project(':@react-native-community_async-storage')
-    implementation project(':react-native-vector-icons')
-    implementation project(':react-native-linear-gradient')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+"  // From node_modules
 
