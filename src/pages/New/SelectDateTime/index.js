@@ -12,7 +12,7 @@ export default function SelectDateTime() {
   return (
     <Background>
       <Container>
-        <DateInput date={date} onChanged={setDate} /> />
+        <DateInput date={date} onChanged={setDate} />
       </Container>
     </Background>
   );
