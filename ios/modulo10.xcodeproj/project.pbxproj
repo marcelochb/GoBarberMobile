@@ -767,7 +767,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.modulo9;
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.modulo101;
 				PRODUCT_NAME = modulo10;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -790,7 +790,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.modulo9;
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.modulo101;
 				PRODUCT_NAME = modulo10;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				VERSIONING_SYSTEM = "apple-generic";
