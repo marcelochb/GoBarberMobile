@@ -1,8 +1,9 @@
 import React, { useMemo } from 'react';
 import { TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import { formatRelative, parseISO } from 'date-fns';
+import { formatRelative, parseISO, format } from 'date-fns';
 import pt from 'date-fns/locale/pt';
+import { utcToZonedTime } from 'date-fns-tz';
 import api from '~/services/api';
 
 import Background from '~/components/Background';
@@ -12,12 +13,15 @@ import { Container, Avatar, Name, Time, SubmitButton } from './styles';
 export default function Confirm({ navigation }) {
   const provider = navigation.getParam('provider');
   const time = navigation.getParam('time');
-
+  const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   const dateFormatted = useMemo(
-    () => formatRelative(parseISO(time), new Date(), { locale: pt }),
-    [time]
+    () =>
+      formatRelative(utcToZonedTime(time, { timeZone: timezone }), new Date(), {
+        locale: pt,
+      }),
+    [time, timezone]
   );
-
+  console.tron.log(dateFormatted);
   async function handleAddAppointment() {
     await api.post('appointments', {
       provider_id: provider.id,

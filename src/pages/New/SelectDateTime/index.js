@@ -11,7 +11,7 @@ import { Container, HourList, Hour, Title } from './styles';
 
 export default function SelectDateTime({ navigation }) {
   const [date, setDate] = useState(new Date());
-  const [hours, setHours] = useState(new Date());
+  const [hours, setHours] = useState([]);
 
   const provider = navigation.getParam('provider');
 
