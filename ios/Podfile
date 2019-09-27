@@ -35,6 +35,8 @@ target 'modulo10' do
 
   pod 'RNReanimated', :path => '../node_modules/react-native-reanimated'
 
+  pod 'CodePush', :path => '../node_modules/react-native-code-push'
+
   target 'modulo10Tests' do
     inherit! :search_paths
     # Pods for testing
