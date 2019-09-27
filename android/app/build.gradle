@@ -128,7 +128,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.modulo10"
+        applicationId "com.gobarberuser"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
