@@ -15,13 +15,22 @@ class Index extends Component {
     super(props);
 
     OneSignal.init('e5936c55-7149-4920-a597-48da4d8ade95');
+
     OneSignal.addEventListener('received', this.onReceived);
     OneSignal.addEventListener('opened', this.onOpened);
     OneSignal.addEventListener('ids', this.onIds);
   }
 
+  componentWillUnmount() {
+    OneSignal.removeEventListener('received', this.onReceived);
+    OneSignal.removeEventListener('opened', this.onOpened);
+    OneSignal.removeEventListener('ids', this.onIds);
+  }
+
   onReceived = data => {};
+
   onOpened = notification => {};
+
   onIds = id => {};
 
   render() {
