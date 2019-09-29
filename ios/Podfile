@@ -46,13 +46,3 @@ target 'modulo10' do
 
   use_native_modules!
 end
-
-target 'modulo10-tvOS' do
-  # Pods for modulo10-tvOS
-
-  target 'modulo10-tvOSTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-end
