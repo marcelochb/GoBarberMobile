@@ -31,6 +31,7 @@ export default function DateInput({ date, onChange }) {
             minuteInterval={60}
             locale="pt"
             mode="date"
+            color="black"
           />
         </Picker>
       )}

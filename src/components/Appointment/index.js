@@ -2,17 +2,23 @@ import React, { useMemo } from 'react';
 import { TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { parseISO, formatRelative } from 'date-fns';
+import { utcToZonedTime } from 'date-fns-tz';
 import pt from 'date-fns/locale/pt';
 
 import { Container, Left, Avatar, Info, Name, Time } from './styles';
 
 export default function Appointment({ data, onCancel }) {
+  const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   const dateParsed = useMemo(() => {
-    return formatRelative(parseISO(data.date), new Date(), {
-      locale: pt,
-      adSuffix: true,
-    });
-  }, [data.date]);
+    return formatRelative(
+      utcToZonedTime(parseISO(data.date), { timeZone: timezone }),
+      new Date(),
+      {
+        locale: pt,
+        adSuffix: true,
+      }
+    );
+  }, [data.date, timezone]);
   return (
     <Container past={data.past}>
       <Left>
