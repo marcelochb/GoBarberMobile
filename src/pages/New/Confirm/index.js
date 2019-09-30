@@ -21,7 +21,6 @@ export default function Confirm({ navigation }) {
       }),
     [time, timezone]
   );
-  console.tron.log(dateFormatted);
   async function handleAddAppointment() {
     await api.post('appointments', {
       provider_id: provider.id,
