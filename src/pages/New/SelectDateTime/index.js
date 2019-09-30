@@ -12,7 +12,6 @@ import { Container, HourList, Hour, Title } from './styles';
 export default function SelectDateTime({ navigation }) {
   const [date, setDate] = useState(new Date());
   const [hours, setHours] = useState([]);
-  const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
   const provider = navigation.getParam('provider');
 
@@ -21,13 +20,12 @@ export default function SelectDateTime({ navigation }) {
       const response = await api.get(`appointments/${provider.id}/available`, {
         params: {
           date: date.getTime(),
-          timezone,
         },
       });
       setHours(response.data);
     }
     loadAvailable();
-  }, [date, provider.id, timezone]);
+  }, [date, provider.id]);
 
   function handleSelectHour(time) {
     navigation.navigate('Confirm', {
