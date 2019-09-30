@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { StatusBar } from 'react-native';
 import CodePush from 'react-native-code-push';
 import OneSignal from 'react-native-onesignal';
+import sentryConfig from './config/sentry';
 
 import './config/ReactotronConfig';
 
@@ -14,6 +15,7 @@ class Index extends Component {
   constructor(props) {
     super(props);
 
+    Sentry.init(sentryConfig);
     OneSignal.init('e5936c55-7149-4920-a597-48da4d8ade95');
 
     OneSignal.addEventListener('received', this.onReceived);

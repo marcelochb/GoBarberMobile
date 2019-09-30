@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		1076D6A1ABFBDEFA4347ED62 /* libPods-modulo10.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B180614D546F70D81A97F9A /* libPods-modulo10.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
@@ -28,6 +27,7 @@
 		C4A9ACDF874E43C3A22B9301 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69BB016E9EBE4B38B7E45D3C /* Foundation.ttf */; };
 		DEDEB53CBB524B42B89FA8CC /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88546861B5B04D19B81B4113 /* MaterialIcons.ttf */; };
 		EC7734E04C614CAE9E2BA950 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22005F268477488CB8E67E90 /* FontAwesome5_Solid.ttf */; };
+		619C5E69D6B042E98B17A411 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CC782BAA004E198B76FA34 /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,10 +67,12 @@
 		BE5B64C203BC4E139BFC6D79 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		CD87C65C93866E5EB3BEF5A4 /* libPods-modulo10-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-modulo10-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9F5CF9105D44BAFA29DDB38 /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
+		E59A064A6EF949542E51C020 /* Pods-modulo10.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-modulo10.staging.xcconfig"; path = "Target Support Files/Pods-modulo10/Pods-modulo10.staging.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		EFDAA0B508F54CDC8AF5902B /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		FBAAE497CA959143346A03D3 /* Pods-modulo10.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-modulo10.debug.xcconfig"; path = "Target Support Files/Pods-modulo10/Pods-modulo10.debug.xcconfig"; sourceTree = "<group>"; };
+		97CC782BAA004E198B76FA34 /* libz.tbd */ = {isa = PBXFileReference; name = "libz.tbd"; path = "usr/lib/libz.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1076D6A1ABFBDEFA4347ED62 /* libPods-modulo10.a in Frameworks */,
+				619C5E69D6B042E98B17A411 /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +128,7 @@
 				CD87C65C93866E5EB3BEF5A4 /* libPods-modulo10-tvOS.a */,
 				98A375D026DD886718912F4C /* libPods-modulo10-tvOSTests.a */,
 				12EA4300C1DF8D45CA88B446 /* libPods-modulo10Tests.a */,
+				97CC782BAA004E198B76FA34 /* libz.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -171,6 +175,7 @@
 				A36D0DB5A7B5E1447F399629 /* Pods-modulo10-tvOSTests.release.xcconfig */,
 				AFAB6DAFB1965B8332401869 /* Pods-modulo10Tests.debug.xcconfig */,
 				7F69E1B2839783126728A25F /* Pods-modulo10Tests.release.xcconfig */,
+				E59A064A6EF949542E51C020 /* Pods-modulo10.staging.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -198,6 +203,14 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		8A297D5882F24567BACF6783 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			path = Application;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -212,6 +225,7 @@
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				0618E2F9499A6FA1E6D0BBF9 /* [CP] Copy Pods Resources */,
+				DBEB4B1C9412415C953DF41A /* Upload Debug Symbols to Sentry */,
 			);
 			buildRules = (
 			);
@@ -296,7 +310,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+			shellScript = "export SENTRY_PROPERTIES=sentry.properties\nexport NODE_BINARY=node\n../node_modules/@sentry/cli/bin/sentry-cli react-native xcode ../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
 		0618E2F9499A6FA1E6D0BBF9 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -386,6 +400,20 @@
 			shellPath = /bin/sh;
 			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
 			showEnvVarsInLog = 0;
+		};
+		DBEB4B1C9412415C953DF41A /* Upload Debug Symbols to Sentry */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			name = "Upload Debug Symbols to Sentry";
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			shellPath = /bin/sh;
+			shellScript = "export SENTRY_PROPERTIES=sentry.properties\n../node_modules/@sentry/cli/bin/sentry-cli upload-dsym";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -615,7 +643,7 @@
 		};
 		ABA000A423406AEF00E7E8AF /* Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3036A332CAB869210804CA87 /* Pods-modulo10.release.xcconfig */;
+			baseConfigurationReference = E59A064A6EF949542E51C020 /* Pods-modulo10.staging.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
