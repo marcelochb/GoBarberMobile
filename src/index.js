@@ -5,6 +5,7 @@ import { StatusBar } from 'react-native';
 import CodePush from 'react-native-code-push';
 import OneSignal from 'react-native-onesignal';
 import sentryConfig from './config/sentry';
+import * as Sentry from '@sentry/react-native';
 
 import './config/ReactotronConfig';
 
